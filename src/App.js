@@ -29,9 +29,24 @@ const App = () => {
           color: '#333',
           fontSize: '1.2rem',
         }}>
-          <li>💻 Created innovative React projects like this landing page!</li>
-          <li>🎨 Applied fundamentals of Digital Art in my recent works</li>
-          <li>🛠️ Contributed to HackTheBox challenges and advanced my cybersecurity skills.</li>
+          <li
+            onClick={() => alert('💻 Created innovative React projects like this landing page!')}
+            style={{ cursor: 'pointer', color: '#007bff', textDecoration: 'underline' }}
+          >
+            💻 Created innovative React projects like this landing page!
+          </li>
+          <li
+            onClick={() => alert('🎨 Applied fundamentals of Digital Art in my recent works')}
+            style={{ cursor: 'pointer', color: '#007bff', textDecoration: 'underline' }}
+          >
+            🎨 Applied fundamentals of Digital Art in my recent works
+          </li>
+          <li
+            onClick={() => alert('🛠️ Contributed to HackTheBox challenges and advanced my cybersecurity skills.')}
+            style={{ cursor: 'pointer', color: '#007bff', textDecoration: 'underline' }}
+          >
+            🛠️ Contributed to HackTheBox challenges and advanced my cybersecurity skills.
+          </li>
         </ul>
 
         <button 
@@ -44,11 +59,25 @@ const App = () => {
             cursor: 'pointer',
             fontSize: '1rem',
             marginTop: '20px',
+            transition: 'background-color 0.3s',
           }}
+          onMouseOver={(e) => e.target.style.backgroundColor = '#4bb3e8'}
+          onMouseOut={(e) => e.target.style.backgroundColor = '#61dafb'}
         >
           Get Started
         </button>
       </main>
+
+      {/* Footer Section */}
+      <footer style={{
+        marginTop: '20px',
+        color: '#888',
+        fontSize: '0.9rem',
+        paddingTop: '10px',
+        borderTop: '1px solid #ddd',
+      }}>
+        <p>© 2025 Lauren James Josafat. All rights reserved.</p>
+      </footer>
     </div>
   );
 };
